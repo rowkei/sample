@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Actlogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>日付</th>
+      <th>カテゴリー</th>
+      <th>時間</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @actlogs.each do |actlog| %>
+      <tr>
+        <td><%= actlog.date %></td>
+        <td><%= actlog.category %></td>
+        <td><%= actlog.time %></td>
+        <td><%= link_to 'Show', actlog %></td>
+        <td><%= link_to 'Edit', edit_actlog_path(actlog) %></td>
+        <td><%= link_to 'Destroy', actlog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '記録', new_actlog_path %>

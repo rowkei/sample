@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @actlog.date %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @actlog.category %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @actlog.time %>
+</p>
+
+<%= link_to 'Edit', edit_actlog_path(@actlog) %> |
+<%= link_to 'Back', actlogs_path %>
