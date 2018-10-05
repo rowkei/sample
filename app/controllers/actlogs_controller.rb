@@ -1,5 +1,5 @@
 class ActlogsController < ApplicationController
-  before_action :set_actlog, only: [:show, :edit, :update, :destroy]
+  before_action :set_actlog, only: [:show, :edit, :update, :destroy ]
 
   # GET /actlogs
   # GET /actlogs.json
@@ -59,6 +59,10 @@ class ActlogsController < ApplicationController
       format.html { redirect_to actlogs_url, notice: 'Actlog was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def sum
+    @categories = Category.all
   end
 
   private

@@ -5,8 +5,16 @@
 <table>
   <thead>
     <tr>
+      <th><%= link_to '記録', new_actlog_path %></th>
+      <th>カテゴリ追加</th>
+      <th><%= link_to 'カテゴリ集計', sum_actlogs_path %></th>
+    </tr>
+    
+    <tr>
       <th>日付</th>
-      <th>カテゴリー</th>
+      <th>カテゴリ</th>
+      <th>開始時間</th>
+      <th>終了時間</th>
       <th>時間</th>
       <th colspan="3"></th>
     </tr>
@@ -17,6 +25,8 @@
       <tr>
         <td><%= actlog.date %></td>
         <td><%= actlog.category %></td>
+        <td><%= actlog.starttime %></td>
+        <td><%= actlog.endtime %></td>
         <td><%= actlog.time %></td>
         <td><%= link_to 'Show', actlog %></td>
         <td><%= link_to 'Edit', edit_actlog_path(actlog) %></td>
@@ -28,4 +38,4 @@
 
 <br>
 
-<%= link_to '記録', new_actlog_path %>
+
