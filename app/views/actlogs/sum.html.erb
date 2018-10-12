@@ -2,21 +2,32 @@
 
 <h1>Actlogs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>日別</th>
-      <th>月別</th>
-      <th>年別</th>
-      <th><%= link_to '一覧に戻る', actlogs_path %></th>
-    </tr>
-    <tr>
-    
-    </tr>
-  </thead>
+<div class="btn-group" role="group" aria-label="header">
+  <tr>
+    <th>
+      <button type="button" class="btn btn-default">
+        日別
+      </button>
+    </th>
+    <th>
+      <button type="button" class="btn btn-default">
+        月別
+      </button>
+    </th>
+    <th>
+      <button type="button" class="btn btn-default">
+      　年別
+      </button>
+    </th>
+    <th>
+      <button type="button" class="btn btn-default">
+      　<%= link_to '一覧に戻る', actlogs_path %>
+      </button>
+    </th>
+  </tr>
+</div>
 
-  
-</table>
+
 
 <br>
 

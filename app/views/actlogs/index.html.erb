@@ -7,7 +7,7 @@
   <tr>
     <th>
       <button type="button" class="btn btn-default">
-        <%= link_to '記録', new_actlog_path %>
+        <%= link_to 'ログ追加', new_actlog_path %>
       </button>
     </th>
     <th>
@@ -23,7 +23,18 @@
   </tr>
   </div>
 
+  <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    年月
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#">2018年10月</a></li>
+  </ul>
+  </div>
+
   <div class="container">
+    <div class="table-responsive">
     <table class="table">    
       <thead>
         <tr>
@@ -37,20 +48,30 @@
       </thead>
 
       <tbody>
-        <% @actlogs.each do |actlog| %>
+        <% @category.each do |c| %>
+          <% c.actlogs.each do |actlog| %>
           <tr>
             <td><%= actlog.date %></td>
-            <td><%= actlog.category %></td>
+            <td><%= c.name %></td>
             <td><%= actlog.starttime %></td>
             <td><%= actlog.endtime %></td>
             <td><%= actlog.time %></td>
-            <td><%= link_to '編集', edit_actlog_path(actlog) %></td>
-            <td><%= link_to '削除', actlog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td>
+              <button type="button" class="btn btn-success">
+                <%= link_to '編集', edit_actlog_path(actlog) %></td>
+              </button>
+            <td>
+              <button type="button" class="btn btn-danger">
+                <%= link_to '削除', actlog, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </button>
+            </td>
           </tr>
+          <% end %>
         <% end %>
       </tbody>
-</table>
-
+    </table>
+    </div>
+  </div>
 <br>
 
 

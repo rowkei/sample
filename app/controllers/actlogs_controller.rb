@@ -5,6 +5,7 @@ class ActlogsController < ApplicationController
   # GET /actlogs.json
   def index
     @actlogs = Actlog.all
+    @category = Category.all.includes(:actlogs).order("actlogs.date DESC")
   end
 
   # GET /actlogs/1
