@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_12_120506) do
+ActiveRecord::Schema.define(version: 2018_10_14_025202) do
 
   create_table "actlogs", force: :cascade do |t|
     t.date "date"
-    t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.time "starttime"

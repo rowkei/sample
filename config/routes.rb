@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-  resources :actlogs do
-    collection do
-      get 'sum'
-    end
+  resources :categories do
+    resources :actlogs
   end
 
   resources :diaries

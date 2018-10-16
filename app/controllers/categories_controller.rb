@@ -1,4 +1,4 @@
-class ActlogsController < ApplicationController
+class CategoriesController < ApplicationController
   before_action :set_actlog, only: [:show, :edit, :update, :destroy ]
 
   

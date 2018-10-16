@@ -7,7 +7,7 @@
   <tr>
     <th>
       <button type="button" class="btn btn-default">
-        <%= link_to 'ログ追加', new_actlog_path %>
+        <%= link_to 'ログ追加', new_category_actlog_path %>
       </button>
     </th>
     <th>
@@ -17,7 +17,7 @@
     </th>
     <th>
       <button type="button" class="btn btn-default">
-        <%= link_to 'カテゴリ集計', sum_actlogs_path %>
+        <%= link_to 'カテゴリ集計' %>
       </button>
     </th>
   </tr>
@@ -58,11 +58,11 @@
             <td><%= actlog.time %></td>
             <td>
               <button type="button" class="btn btn-success">
-                <%= link_to '編集', edit_actlog_path(actlog) %></td>
+                <%= link_to '編集' %></td>
               </button>
             <td>
               <button type="button" class="btn btn-danger">
-                <%= link_to '削除', actlog, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%= link_to '削除' %>
               </button>
             </td>
           </tr>
