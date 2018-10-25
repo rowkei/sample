@@ -14,6 +14,7 @@ class ActlogsController < ApplicationController
  
   def new
     @actlog = Actlog.new
+    @category = Category.all
   end
 
  

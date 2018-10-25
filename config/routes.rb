@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  resources :categories do
-    resources :actlogs
+
+  resources :categories
+  resources :actlogs
+  
+  namespace :actlogs do
+    resources:sums
   end
+
 
   resources :diaries
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

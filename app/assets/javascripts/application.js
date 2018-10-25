@@ -15,3 +15,12 @@
 //= require turbolinks
 //= require jquery
 //= require bootstrap-sprockets
+//= require moment
+//= require moment/ja
+//= require bootstrap-datetimepicker
+
+var data = {'data-format': 'yyyy-MM-dd' };
+$(function(){
+    $('.datepicker').attr(data);
+    $('.datepicker').datetimepicker();
+});

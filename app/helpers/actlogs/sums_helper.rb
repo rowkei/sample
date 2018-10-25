@@ -1,0 +1,2 @@
+module Actlogs::SumsHelper
+end
