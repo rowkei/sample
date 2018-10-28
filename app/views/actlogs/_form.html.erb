@@ -12,45 +12,45 @@
   <% end %>
 
   <div class="field">
-  <form class="container">
+  
         <div class="row">
-        <div class="form-group">
+        
           <label class="col-sm-1 control-label">日付</label>
           <div class="col-sm-5">
             <%= form.text_field :date, class: 'datepicker' %>
             
           </div>
-        </div>
+        
         </div>
         <div class="row">
-        <div class="form-group">
+        
           <label class="col-sm-1 control-label">カテゴリ</label>
           <div class="col-sm-5">
             
-          <%= form_for @actlog do |f| %>
-            <%= f.collection_select :category_id, Category.all, :id, :name %>
-          <% end %>
+          
+          <%= form.collection_select :category_id, Category.all, :id, :name %>
+          
           </div>
-        </div>
+        
         </div>
         <div class="row">
-        <div class="form-group">
+        
           <label class="col-sm-1 control-label">開始時間</label>
           <div class="col-sm-5">
             <input class="form-control" type="text">
           </div>
-        </div>
+        
         </div>
         <div class="row">
-        <div class="form-group">
+        
           <label class="col-sm-1 control-label">終了時間</label>
           <div class="col-sm-5">
             <input class="form-control" type="text">
           </div>
-        </div>
+        
         </div>
         
-  </form>
+  
   </div>
 
   

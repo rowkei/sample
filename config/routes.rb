@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :actlogs
   
   namespace :actlogs do
-    resources:sums
+    resources:sums, only: %i(index)
   end
 
 
