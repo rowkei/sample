@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    models:
+      actlog: ログ
+    attributes:
+      actlog:
+        starttime: 開始時間
+        endtime: 終了時間
+        category_id: カテゴリー

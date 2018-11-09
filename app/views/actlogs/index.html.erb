@@ -58,11 +58,11 @@
             <td><%= actlog.time %></td>
             <td>
               <button type="button" class="btn btn-success">
-                <%= link_to '編集' %></td>
+                <%= link_to '編集', edit_actlog_path(actlog) %></td>
               </button>
             <td>
               <button type="button" class="btn btn-danger">
-                <%= link_to '削除' %>
+                <%= link_to '削除', actlog, method: :delete, data: { confirm: '本当に削除しますか？'} %>
               </button>
             </td>
           </tr>

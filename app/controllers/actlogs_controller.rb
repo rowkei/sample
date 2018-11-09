@@ -23,7 +23,7 @@ class ActlogsController < ApplicationController
 
  
   def create
-    @actlog = Actlog.new(actlog_params)
+    @actlog = Actlog.new(actlog_info)
 
     respond_to do |format|
       if @actlog.save
@@ -70,6 +70,11 @@ class ActlogsController < ApplicationController
 
     
     def actlog_params
-      params.require(:actlog).permit(:date, :category, :time)
+      params.require(:actlog).permit(:date, :category_id, :starttime, :endtime, :time)
     end
+
+    def actlog_info
+      actlog_params.merge(@actlog.time)
+    end
+
 end
