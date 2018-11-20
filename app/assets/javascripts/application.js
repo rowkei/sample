@@ -13,8 +13,9 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require jquery
 //= require bootstrap-sprockets
 //= require moment
 //= require moment/ja
 //= require bootstrap-datetimepicker
+//= require jquery3
+//= require popper

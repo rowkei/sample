@@ -1,8 +1,7 @@
 <%= form_with(model: actlog, local: true) do |form| %>
   <% if actlog.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(actlog.errors.count, "error") %> prohibited this actlog from being saved:</h2>
-
+      <h2><%= pluralize(actlog.errors.count, "") %> 件のエラーがあります。</h2>
       <ul>
       <% actlog.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,48 +11,31 @@
   <% end %>
 
   <div class="field">
-  
-        <div class="row">
-        
-          <label class="col-sm-1 control-label">日付</label>
-          <div class="col-sm-5">
-            <%= form.text_field :date, class: 'datepicker' %>
-            
-          </div>
-        
-        </div>
-        <div class="row">
-        
-          <label class="col-sm-1 control-label">カテゴリ</label>
-          <div class="col-sm-5">
-            
-          
-          <%= form.collection_select :category_id, Category.all, :id, :name %>
-          
-          </div>
-        
-        </div>
-        <div class="row">
-        
-          <label class="col-sm-1 control-label">開始時間</label>
-          <div class="col-sm-5">
-            <%= form.time_field :starttime %>
-          </div>
-        
-        </div>
-        <div class="row">
-        
-          <label class="col-sm-1 control-label">終了時間</label>
-          <div class="col-sm-5">
-            <%= form.time_field :endtime %>
-          </div>
-        
-        </div>
-        
-  
+    <div class="row">
+      <label class="col-sm-2 control-label">日付</label>
+      <div class="col-sm-5">
+        <%= form.text_field :date, class: 'datepicker' %>
+      </div>
+    </div>
+    <div class="row">
+      <label class="col-sm-2 control-label">カテゴリ</label>
+      <div class="col-sm-5">
+        <%= form.collection_select :category_id, Category.all, :id, :name, { class: 'form-control'} %>
+      </div>
+    </div>
+    <div class="row">
+      <label class="col-sm-2 control-label">開始時間</label>
+      <div class="col-sm-5">
+        <%= form.time_field :starttime, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="row">
+      <label class="col-sm-2 control-label">終了時間</label>
+      <div class="col-sm-5">
+        <%= form.time_field :endtime, class: 'form-control' %>
+      </div>
+    </div>
   </div>
-
-  
 
   <div class="actions">
     <%= form.submit "保存"%>

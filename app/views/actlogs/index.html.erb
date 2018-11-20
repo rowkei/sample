@@ -1,43 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Actlogs</h1>
+<h1>行動ログ一覧</h1>
 
 
   <div class="btn-group" role="group" aria-label="header">
   <tr>
     <th>
-      <button type="button" class="btn btn-default">
-        <%= link_to 'ログ追加', new_actlog_path %>
-      </button>
+      <%= link_to 'ログ追加', new_actlog_path, class: 'btn btn-default' %>
     </th>
     <th>
-      <button type="button" class="btn btn-default">
-      <%= link_to 'カテゴリ追加', new_category_path %>
-      </button>
-    </th>
-    <th>
-      <button type="button" class="btn btn-default">
-        <%= link_to 'カテゴリ集計' %>
-      </button>
+      <%= link_to 'カテゴリ追加', new_category_path, class: 'btn btn-default' %>
     </th>
   </tr>
   </div>
 
-  <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    年月
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    <li><a href="#">2018年10月</a></li>
-  </ul>
-  </div>
+  
 
   <div class="container">
     <div class="table-responsive">
     <table class="table">    
       <thead>
-        <tr>
+        <tr class="table-active">
           <th>日付</th>
           <th>カテゴリ</th>
           <th>開始時間</th>
